@@ -11,5 +11,6 @@ for i in range(N):
                 pass
             else:
                 c[j]="?"
+#헷갈렸던 내용
 #join으로 리스트 값을 한줄로 출력
 print(''.join(c))

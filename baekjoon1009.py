@@ -1,3 +1,4 @@
+#처음부터 끝까지 오답
 n = int(input())
 
 for i in range(0,n): 
