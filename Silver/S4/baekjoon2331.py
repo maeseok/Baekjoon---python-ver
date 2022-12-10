@@ -13,4 +13,3 @@ while True:
     else:
         tmp.append(x)
 print(len(tmp))
-    
