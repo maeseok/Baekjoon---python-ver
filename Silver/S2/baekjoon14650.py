@@ -14,4 +14,4 @@ def dfs(n,sum):
         else:
             dfs(n+1,sum+i)
 dfs(0,0)
-print(ans)
+print(ans)b
