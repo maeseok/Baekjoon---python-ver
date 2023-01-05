@@ -1,12 +1,20 @@
 import sys
-input=sys.stdin.readline
-tmp=[]
-for i in range(int(input())):
-    tmp.append(int(input().rstrip()))
-n=max(tmp)
-arr=[False,False]+([True]*(int(n**0.5)+1))
-for i in range(2,int(n**0.5)+1):
-    if i*i>int(n**0.5):
-        break
-    for j in range(2*i,int(n**0.5)+1,i):
-        arr[j]=False
+input = sys.stdin.readline
+max=1000000
+dp=[0]*(max+1)
+s=[0]*(max+1)
+
+for i in range(1,max+1):
+    j=1
+    while i*j<= max:
+        dp[i*j]+=i
+        j+=1
+for i in range(1,max+1):
+    s[i] = s[i-1]+dp[i]
+
+n = int(input())
+ans=[]
+for _ in range(n):
+    a = int(input().rstrip())
+    ans.append(s[a])
+print("\n".join(map(str,ans))+'\n')
